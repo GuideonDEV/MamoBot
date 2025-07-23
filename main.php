@@ -29,7 +29,8 @@ include __DIR__."/modules/checker/sm.php";
 
 //////////////===[START]===//////////////
 
-if(strpos($message, "/start") === 0){
+//////if(strpos($message, "/start") === 0){
+if(strpos($message ?? '', "/start") === 0){
 if(!isBanned($userId) && !isMuted($userId)){
 
   if($userId == $config['adminID']){
